@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ぼくんところ]]></title><description><![CDATA[なんか書く]]></description><link>https://michi1129.github.io/</link><generator>RSS for Node</generator><lastBuildDate>Wed, 12 Dec 2018 15:27:38 GMT</lastBuildDate><item><title><![CDATA[最初のポスト]]></title><description><![CDATA[テーマをいじってからーとか、内容決まってからー、とかでいつまで経ってもすすまないし、
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ぼくんところ]]></title><description><![CDATA[なんか書く]]></description><link>https://michi1129.github.io/</link><generator>RSS for Node</generator><lastBuildDate>Sat, 15 Dec 2018 13:27:16 GMT</lastBuildDate><item><title><![CDATA[Helix Pico のキーマップを変更した話]]></title><description><![CDATA[というわけで、今年に入ってからいくつかキーボードを購入したりし作ったりしたうち、一番最近に作ったHelixPicoのキーマップをEucalyn配列っぽいものに変更してみました。 これまでのキーボード ちなみにこれまでにさわったのはこのあたりです。 NiZ Plum 7…]]></description><link>https://michi1129.github.io//18/12/15/</link><guid isPermaLink="false">https://michi1129.github.io//18/12/15/</guid><pubDate>Sat, 15 Dec 2018 12:38:08 GMT</pubDate><content:encoded>&lt;p&gt;というわけで、今年に入ってからいくつかキーボードを購入したりし作ったりしたうち、一番最近に作ったHelixPicoのキーマップをEucalyn配列っぽいものに変更してみました。&lt;/p&gt;
+&lt;h3&gt;これまでのキーボード&lt;/h3&gt;
+&lt;p&gt;ちなみにこれまでにさわったのはこのあたりです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NiZ Plum 75&lt;/li&gt;
+&lt;li&gt;Ultimate Hacking Keyboard&lt;/li&gt;
+&lt;li&gt;Mint 60&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;今回のキーボード&lt;/h3&gt;
+&lt;p&gt;今回はHelixPicoです。普通に打っててもこれまでの row staggerd なものと違ってちょっとスピードが落ちるし、どうせならと思ってやってみました。&lt;/p&gt;
+&lt;p&gt;普通のEucalyn配列をベースにしつつ、やっぱりVimmerだしhjklは並べたいよねということでちょっとだけ変更しています。
+&lt;a href=&quot;https://github.com/michi1129/qmk_firmware/tree/eucalyn/keyboards/helix/pico/keymaps/roeucln&quot;&gt;https://github.com/michi1129/qmk_firmware/tree/eucalyn/keyboards/helix/pico/keymaps/roeucln&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;タップと長押しとで複数キーコードを設定するのに、普段の自分のタイプの感じだとタップがあまり反応してくれず、意識して素早く離す必要があってちょっと鬱陶しい感じだったので &lt;code class=&quot;language-text&quot;&gt;TAPPING_TERM&lt;/code&gt; の値を変更したりしています。あまり長すぎると長押しにならずタップの連続になってしまっていたので、ちょうど間くらい。&lt;/p&gt;
+&lt;h3&gt;検討事項&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;キーの無駄がある&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;BS&lt;/code&gt; とか2つもいらないはず。元の位置に置きたいキーがなかったので仮に。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Space&lt;/code&gt; と &lt;code class=&quot;language-text&quot;&gt;BS&lt;/code&gt; はその位置でいいか？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;左親指が忙しすぎなのでは？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;o&lt;/code&gt; の位置が気になる&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通常日本語入力すると &lt;code class=&quot;language-text&quot;&gt;w&lt;/code&gt; と &lt;code class=&quot;language-text&quot;&gt;o&lt;/code&gt; が連続することが多いし、指替えたらどうなるか&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;参考URL&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiita.com/aoirohn/items/60b0fbc80baae124775e&quot;&gt;https://qiita.com/aoirohn/items/60b0fbc80baae124775e&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiita.com/uodna/items/6d23581d26c1adb23377&quot;&gt;https://qiita.com/uodna/items/6d23581d26c1adb23377&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.qmk.fm/#/feature_advanced_keycodes&quot;&gt;https://docs.qmk.fm/#/feature&lt;em&gt;advanced&lt;/em&gt;keycodes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;さいごに&lt;/h3&gt;
+&lt;p&gt;このエントリーはHelixPicoとEucalyn配列をちょっと修正したものも併用して書きました。いきなり長文にチャレンジというのはやってられなかった。&lt;/p&gt;
+&lt;p&gt;それにしてもこのテーマだとマークダウンがうまく表示されないかも。困った。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[最初のポスト]]></title><description><![CDATA[テーマをいじってからーとか、内容決まってからー、とかでいつまで経ってもすすまないし、
 いろいろやりたいことあるし、待ってても順番が回ってこないので、
 とりあえず無理矢理にでも進めてみようと思う。]]></description><link>https://michi1129.github.io//18/12/13/</link><guid isPermaLink="false">https://michi1129.github.io//18/12/13/</guid><pubDate>Wed, 12 Dec 2018 15:01:20 GMT</pubDate><content:encoded>&lt;p&gt;テーマをいじってからーとか、内容決まってからー、とかでいつまで経ってもすすまないし、
 いろいろやりたいことあるし、待ってても順番が回ってこないので、
