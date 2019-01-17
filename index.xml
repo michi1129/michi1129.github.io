@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ぼくんところ</title>
+    <link>https://michi1129.github.io/</link>
+    <description>Recent content on ぼくんところ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 Jan 2019 00:00:27 +0900</lastBuildDate>
+    
+	<atom:link href="https://michi1129.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GatsbyからHugoに乗り換えた話</title>
+      <link>https://michi1129.github.io/post/19/01/17/</link>
+      <pubDate>Fri, 18 Jan 2019 00:00:27 +0900</pubDate>
+      
+      <guid>https://michi1129.github.io/post/19/01/17/</guid>
+      <description>&lt;p&gt;今更ですが、年も開けたのでまたなんか書きましょう。&lt;/p&gt;
+
+&lt;p&gt;まずは前回のポストで、どうもMarkdownの修飾があまり良さげでなかったように思えたので、Starterを変更するとかを飛ばして、ジェネレータごと変えてみました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Helix Pico のキーマップを変更した話</title>
+      <link>https://michi1129.github.io/post/18/12/15/</link>
+      <pubDate>Sat, 15 Dec 2018 12:38:08 +0000</pubDate>
+      
+      <guid>https://michi1129.github.io/post/18/12/15/</guid>
+      <description>&lt;p&gt;というわけで、今年に入ってからいくつかキーボードを購入したりし作ったりしたうち、一番最近に作ったHelixPicoのキーマップをEucalyn配列っぽいものに変更してみました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>最初のポスト</title>
+      <link>https://michi1129.github.io/post/18/12/13/</link>
+      <pubDate>Wed, 12 Dec 2018 15:01:20 +0000</pubDate>
+      
+      <guid>https://michi1129.github.io/post/18/12/13/</guid>
+      <description>テーマをいじってからーとか、内容決まってからー、とかでいつまで経ってもすすまないし、 いろいろやりたいことあるし、待ってても順番が回ってこないので、 とりあえず無理矢理にでも進めてみようと思う。</description>
+    </item>
+    
+  </channel>
+</rss>
