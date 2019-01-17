@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Helix Pico のキーマップを変更した話</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<meta name="generator" content="Hugo 0.53" />
+	<meta property="og:title" content="Helix Pico のキーマップを変更した話" />
+<meta property="og:description" content="というわけで、今年に入ってからいくつかキーボードを購入したりし作ったりしたうち、一番最近に作ったHelixPicoのキーマップをEucalyn配列っぽいものに変更してみました。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://michi1129.github.io/post/18/12/15/" /><meta property="article:published_time" content="2018-12-15T12:38:08&#43;00:00"/>
+<meta property="article:modified_time" content="2018-12-15T12:38:08&#43;00:00"/>
+
+	
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="ぼくんところ" rel="home">
+				<div class="logo__title">ぼくんところ</div>
+				
+			</a>
+		</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Helix Pico のキーマップを変更した話</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2018-12-15T12:38:08">December 15, 2018</time>
+</div>
+</div>
+		</header><div class="content post__content clearfix">
+			<p>というわけで、今年に入ってからいくつかキーボードを購入したりし作ったりしたうち、一番最近に作ったHelixPicoのキーマップをEucalyn配列っぽいものに変更してみました。</p>
+
+<h3 id="これまでのキーボード">これまでのキーボード</h3>
+
+<p>ちなみにこれまでにさわったのはこのあたりです。</p>
+
+<ul>
+<li>NiZ Plum 75</li>
+<li>Ultimate Hacking Keyboard</li>
+<li>Mint 60</li>
+</ul>
+
+<h3 id="今回のキーボード">今回のキーボード</h3>
+
+<p>今回はHelixPicoです。普通に打っててもこれまでの row staggerd なものと違ってちょっとスピードが落ちるし、どうせならと思ってやってみました。</p>
+
+<p>普通のEucalyn配列をベースにしつつ、やっぱりVimmerだしhjklは並べたいよねということでちょっとだけ変更しています。
+<a href="https://github.com/michi1129/qmk_firmware/tree/eucalyn/keyboards/helix/pico/keymaps/roeucln">https://github.com/michi1129/qmk_firmware/tree/eucalyn/keyboards/helix/pico/keymaps/roeucln</a></p>
+
+<p>タップと長押しとで複数キーコードを設定するのに、普段の自分のタイプの感じだとタップがあまり反応してくれず、意識して素早く離す必要があってちょっと鬱陶しい感じだったので <code>TAPPING_TERM</code> の値を変更したりしています。あまり長すぎると長押しにならずタップの連続になってしまっていたので、ちょうど間くらい。</p>
+
+<h3 id="検討事項">検討事項</h3>
+
+<ul>
+<li>キーの無駄がある
+
+<ul>
+<li><code>BS</code> とか2つもいらないはず。元の位置に置きたいキーがなかったので仮に。</li>
+</ul></li>
+<li><code>Space</code> と <code>BS</code> はその位置でいいか？
+
+<ul>
+<li>左親指が忙しすぎなのでは？</li>
+</ul></li>
+<li><code>o</code> の位置が気になる
+
+<ul>
+<li>通常日本語入力すると <code>w</code> と <code>o</code> が連続することが多いし、指替えたらどうなるか</li>
+</ul></li>
+</ul>
+
+<h3 id="参考url">参考URL</h3>
+
+<ul>
+<li><a href="https://qiita.com/aoirohn/items/60b0fbc80baae124775e">https://qiita.com/aoirohn/items/60b0fbc80baae124775e</a></li>
+<li><a href="https://qiita.com/uodna/items/6d23581d26c1adb23377">https://qiita.com/uodna/items/6d23581d26c1adb23377</a></li>
+<li><a href="https://docs.qmk.fm/#/feature_advanced_keycodes">https://docs.qmk.fm/#/feature_advanced_keycodes</a></li>
+</ul>
+
+<h3 id="さいごに">さいごに</h3>
+
+<p>このエントリーはHelixPicoとEucalyn配列をちょっと修正したものも併用して書きました。いきなり長文にチャレンジというのはやってられなかった。</p>
+
+<p>それにしてもこのテーマだとマークダウンがうまく表示されないかも。困った。</p>
+		</div>
+		
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="michi1129 avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About michi1129</span>
+	</div>
+	<div class="authorbox__description">
+		Swift書いたりする。
+	</div>
+</div>
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/post/18/12/13/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">最初のポスト</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/post/19/01/17/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">GatsbyからHugoに乗り換えた話</p></a>
+	</div>
+</nav>
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://michi1129.github.io/" />
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/19/01/17/">GatsbyからHugoに乗り換えた話</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/18/12/15/">Helix Pico のキーマップを変更した話</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/18/12/13/">最初のポスト</a></li>
+		</ul>
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2019 ぼくんところ.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script></body>
+</html>
