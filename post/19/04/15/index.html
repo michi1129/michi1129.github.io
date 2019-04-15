@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>PharoでSeasideを動かす</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<meta name="generator" content="Hugo 0.55.0" />
+	<meta property="og:title" content="PharoでSeasideを動かす" />
+<meta property="og:description" content="以前SqueakでSeasideを動かそうとしたことがありましたが、途中でエラーが出て放り出したので、今回改めてPharoでSeasideを動かしてみました。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://michi1129.github.io/post/19/04/15/" />
+<meta property="article:published_time" content="2019-04-15T23:05:50&#43;09:00"/>
+<meta property="article:modified_time" content="2019-04-15T23:05:50&#43;09:00"/>
+
+	
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="ぼくんところ" rel="home">
+				<div class="logo__title">ぼくんところ</div>
+				
+			</a>
+		</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">PharoでSeasideを動かす</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2019-04-15T23:05:50">April 15, 2019</time>
+</div>
+</div>
+		</header><div class="content post__content clearfix">
+			<p>以前SqueakでSeasideを動かそうとしたことがありましたが、途中でエラーが出て放り出したので、今回改めてPharoでSeasideを動かしてみました。</p>
+
+<h2 id="seasideでアプリケーションを動かす">Seasideでアプリケーションを動かす</h2>
+
+<p>実装する内容として先日会社で素数チェッカがどうこうという話を聞いたのでそれでやってみようと思います。どこかにあるチェッカでは大きい数字のチェックができないというのに加えて実行時間がかかるとかいう話もあったので、Smalltalkならば、ということで勢いで動かす企画です。</p>
+
+<h3 id="pharoを入手する">Pharoを入手する</h3>
+
+<p>まずPharoを動かさないと始まらないので、ダウンロードしてきます。<br />
+<a href="https://pharo.org/">https://pharo.org/</a></p>
+
+<p>最初にPharo Launchcerが立ち上がるので、Pharo7(64bit)あたりを動かします。一度起動してしまえば、あとは普通のPharo環境でした。以降は別のバージョンのイメージを使うのでない限りLauncherは不要で、いつも通りにimageをvmに食わせて起動する感じの使い方ができそうです。</p>
+
+<h3 id="seasideを入手する">Seasideを入手する</h3>
+
+<p>次にPharo上でSeasideをアプリケーションサーバとして動かしたいのでそれを用意します。昔はもうちょっとインストールが面倒だった気がしましたが、今ならgithubから直接インストールできるようで一発で入ってしまいました。<br />
+<a href="http://www.seaside.st/">http://www.seaside.st/</a></p>
+
+<pre><code>Metacello new
+  baseline:'Seaside3';
+  repository: 'github://SeasideSt/Seaside:master/repository';
+  load
+</code></pre>
+
+<p>ここまでで <a href="http://localhost:8080/">http://localhost:8080/</a> にアクセスすると、Seasideのトップページが開きます。</p>
+
+<h3 id="コンポーネントを追加する">コンポーネントを追加する</h3>
+
+<p>ビューのクラスを追加します。ここでは <code>PrimeCheckerView</code> としました。</p>
+
+<pre><code>WAComponent subclass: #PrimeCheckerView
+  instanceVariableNames: 'number result'
+  classVariableNames: ''
+  package: 'Seaside-Sample'
+</code></pre>
+
+<p>作ったビューをurlとして参照できるようにします。</p>
+
+<pre><code>WAAdmin register: PrimeCheckerView asApplicationAt: 'prime'
+</code></pre>
+
+<p>これで <a href="http://localhost:8080/prime">http://localhost:8080/prime</a> のURLができました。</p>
+
+<p>あとは細かい実装をまとめて埋めていきます。</p>
+
+<pre><code>PrimeCheckerView&gt;&gt;number 
+  ^number.
+
+PrimeCheckerView&gt;&gt;number: anInteger
+  number := anInteger.
+
+PrimeCheckerView&gt;&gt;result 
+  ^result.
+
+PrimeCheckerView&gt;&gt;check 
+  result := number asString, (number isPrime
+    ifTrue: [ ' is a prime number.' ]
+    ifFalse: [ ' is not a prime number.' ])
+
+PrimeCheckerView&gt;&gt;renderContentOn: html
+  html form: [ 
+    html text: 'Number:'.
+    html textInput 
+      callback: [ :value | self number: value asInteger ];
+      value: (number ifNotNil: [ number asString ]).
+    html break.
+    html submitButton 
+      callback: [ self check ];
+      value: 'Check!'.
+    html break.
+    result ifNotNil: [ html text: result ] ]
+</code></pre>
+
+<p>これでSeasideでアプリケーションを動かすところまでできました。</p>
+
+<p><img src="ss1.png" alt="Screenshot" /></p>
+
+<h3 id="まとめ">まとめ</h3>
+
+<p>あっという間にできてしまってちょっと拍子抜けですが、 <code>renderContentOn:</code> を細かく見ていくと時間がかかりそうです。</p>
+
+<p>本来ならばこのあと、dockerでnginxを動かしてリバースプロキシするところもあるのですが、眠いので次回。</p>
+		</div>
+		
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="michi1129 avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About michi1129</span>
+	</div>
+	<div class="authorbox__description">
+		Swift書いたりする。
+	</div>
+</div>
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/post/19/01/17/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">GatsbyからHugoに乗り換えた話</p></a>
+	</div>
+</nav>
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://michi1129.github.io/" />
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/19/04/15/">PharoでSeasideを動かす</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/19/01/17/">GatsbyからHugoに乗り換えた話</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/18/12/15/">Helix Pico のキーマップを変更した話</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/18/12/13/">最初のポスト</a></li>
+		</ul>
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2019 ぼくんところ.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script></body>
+</html>
