@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ぼくんところ</title>
@@ -6,10 +6,19 @@
     <description>Recent content on ぼくんところ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Apr 2019 23:05:50 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 09 Feb 2020 12:14:20 +0900</lastBuildDate>
     
 	<atom:link href="https://michi1129.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>cocoapods-keysでiOSアプリに値を埋め込む</title>
+      <link>https://michi1129.github.io/post/20/02/09/</link>
+      <pubDate>Sun, 09 Feb 2020 12:14:20 +0900</pubDate>
+      
+      <guid>https://michi1129.github.io/post/20/02/09/</guid>
+      <description>&lt;p&gt;iOSのプロジェクトで、「アプリ内では定数として扱いたいけど、ソースコードのように見える形でリポジトリに含めたくない」みたいな要件があって、 &lt;code&gt;cocoapods-keys&lt;/code&gt; を使えば解決できるのではないか？ということで調べてみました。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>PharoでSeasideを動かす</title>
@@ -27,7 +36,6 @@
       
       <guid>https://michi1129.github.io/post/19/01/17/</guid>
       <description>&lt;p&gt;今更ですが、年も開けたのでまたなんか書きましょう。&lt;/p&gt;
-
 &lt;p&gt;まずは前回のポストで、どうもMarkdownの修飾があまり良さげでなかったように思えたので、Starterを変更するとかを飛ばして、ジェネレータごと変えてみました。&lt;/p&gt;</description>
     </item>
     
