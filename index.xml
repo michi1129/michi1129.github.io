@@ -6,10 +6,19 @@
     <description>Recent content on ぼくんところ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Feb 2020 12:14:20 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 11 Feb 2020 21:33:45 +0900</lastBuildDate>
     
 	<atom:link href="https://michi1129.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Github ActionsでiOSアプリに値を埋め込む</title>
+      <link>https://michi1129.github.io/post/20/02/11/</link>
+      <pubDate>Tue, 11 Feb 2020 21:33:45 +0900</pubDate>
+      
+      <guid>https://michi1129.github.io/post/20/02/11/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://michi1129.github.io/post/20/02/09/&#34;&gt;前回&lt;/a&gt; 、iOSプロジェクトに対してcocoapods-keysで値を入れて、さらにそれをBitriseからも注入できるようにしました。別のチームの場合だとBitriseではなくGithub Actionsで実現しているところもあって、そちらのやり方もまた気になったので試してみます。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>cocoapods-keysでiOSアプリに値を埋め込む</title>
