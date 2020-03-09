@@ -67,6 +67,10 @@ Available destinations <span style="color:#66d9ef">for</span> the <span style="c
 	<span style="color:#f92672">{</span> platform:iOS Simulator, id:65B718C7-139F-4C89-BCC3-EA92976F359C, OS:13.3, name:iPhone <span style="color:#ae81ff">8</span> <span style="color:#f92672">}</span>
 	<span style="color:#f92672">{</span> platform:iOS Simulator, id:9EE345DA-577B-4C6A-982D-6492261EAA42, OS:13.3, name:iPhone <span style="color:#ae81ff">11</span> <span style="color:#f92672">}</span>
 </code></pre></div><p>platform、nameなどの項目の間のカンマによかれと思ってスペースを挟みがちですが、それだとエラーが起きるため、つめて書く必要がありました。</p>
+<p><strong>[200309追記]</strong></p>
+<p><code>-showdestinations</code> オプションを付けることで、上記の一覧を表示することができます。普通にヘルプを読めば分かることでした。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ xcodebuild build -workspace <span style="color:#e6db74">&#34;DataInjectionSample.xcworkspace&#34;</span> -scheme DataInjectionSample -showdestinations
+</code></pre></div><p><strong>[/200309追記]</strong></p>
 <h3 id="github-actionsにワークフローを登録する">Github Actionsにワークフローを登録する</h3>
 <p>yamlファイルに実行するコマンドを書いていきます。いくつかテンプレートが登録されていますがxcodebuildのものは見当たらないので、スケルトンから作ってみることにしました。<br>
 そこにターミナルのhistoryから拾って貼り付ければ、特に問題なくビルドできます。</p>
