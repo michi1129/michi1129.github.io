@@ -6,10 +6,19 @@
     <description>Recent content on ぼくんところ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Feb 2020 21:33:45 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2020 17:33:30 +0900</lastBuildDate>
     
 	<atom:link href="https://michi1129.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mattermostのボットを作る</title>
+      <link>https://michi1129.github.io/post/20/08/08/</link>
+      <pubDate>Sat, 08 Aug 2020 17:33:30 +0900</pubDate>
+      
+      <guid>https://michi1129.github.io/post/20/08/08/</guid>
+      <description>&lt;p&gt;会社内ではMattermostが動いているのですが、他の社内システムと連携したいという要望がこっそり投稿されていて、まあ多少気になっていたのでbotを作ってみました。botの中身についてはともかく、botを動かすところについて一応残しておこうと思います。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Github ActionsでiOSアプリに値を埋め込む</title>
