@@ -6,10 +6,15 @@
     <description>Recent content on ぼくんところ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 Aug 2020 17:33:30 +0900</lastBuildDate>
-    
-	<atom:link href="https://michi1129.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sat, 24 Oct 2020 10:39:20 +0900</lastBuildDate><atom:link href="https://michi1129.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github Actionsでタスクをスケジュール実行する</title>
+      <link>https://michi1129.github.io/post/20/10/24/</link>
+      <pubDate>Sat, 24 Oct 2020 10:39:20 +0900</pubDate>
+      
+      <guid>https://michi1129.github.io/post/20/10/24/</guid>
+      <description>&lt;p&gt;お仕事で、とある処理を自動化できたらうれしくない？ということがあり、 &lt;a href=&#34;https://docs.github.com/en/free-pro-team@latest/actions&#34;&gt;Github Actions&lt;/a&gt; の定期実行を使えば解決できるのではないかと思ったのでやってみました。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Mattermostのボットを作る</title>

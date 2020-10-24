@@ -5,10 +5,6 @@
     <link>https://michi1129.github.io/categories/</link>
     <description>Recent content in Categories on ぼくんところ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://michi1129.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://michi1129.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
